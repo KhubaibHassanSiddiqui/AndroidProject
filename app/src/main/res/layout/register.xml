@@ -29,19 +29,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hi! Welcome to Daraz"
+                android:text="Create an Account"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="24dp"/>
 
             <ImageView
-                android:id="@+id/darazLogo"
+                android:id="@+id/appLogo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/daraz"
-                android:contentDescription="Daraz Logo"
-                android:layout_marginBottom="24dp"/>
+            android:contentDescription="App Logo"
+            android:layout_marginBottom="24dp"/>
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:drawablePadding="8dp"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/emailInput"
@@ -64,10 +74,10 @@
                 android:minHeight="48dp" />
 
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/signupButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Sign Up"
                 android:backgroundTint="@android:color/holo_orange_dark"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="16dp"/>
@@ -75,19 +85,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account? Sign Up"
+                android:text="Already have an account? Log In"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="16sp"
                 android:layout_marginBottom="16dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Not You? Switch Account"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textSize="16sp"
-                android:textAlignment="center"
-                android:layout_marginTop="32dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,10 +98,11 @@
                 android:textSize="16sp"
                 android:textAlignment="center"
                 android:layout_marginTop="5dp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Haven't Sign Up Yet? Sign Up"
+                android:text="Need help? Contact Us"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="16sp"
                 android:textAlignment="center"
