@@ -17,10 +17,11 @@ class CartFragment : Fragment(R.layout.cart) {
 
         val checkoutButton: Button = view.findViewById(R.id.checkout_button)
         checkoutButton.setOnClickListener {
-            val intent = Intent(requireActivity(), CheckoutActivity::class.java)
-            startActivity(intent)
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment, CheckoutFragment())
+                .addToBackStack(null)
+                .commit()
         }
-
         return view
     }
 }

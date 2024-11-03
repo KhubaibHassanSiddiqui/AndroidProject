@@ -1,8 +1,10 @@
 package com.example.project
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 
 class MessagesFragment : Fragment(R.layout.messages) {
@@ -10,6 +12,51 @@ class MessagesFragment : Fragment(R.layout.messages) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.messages, container, false)
+        val view = inflater.inflate(R.layout.messages, container, false)
+
+        val message: View = view.findViewById(R.id.chats_tab)
+        message.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment, ChatFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        val order:View=view.findViewById(R.id.orders_tab)
+        order.setOnClickListener {
+            val intent = Intent(activity, MyOrdersActivity::class.java)
+            startActivity(intent)
+        }
+
+        val act: View = view.findViewById(R.id.activities_tab)
+        act.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment, ActivitiesFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+        val promo: View = view.findViewById(R.id.promos_tab)
+        promo.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment, ActivitiesFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        val promo1: View = view.findViewById(R.id.promo1)
+        promo1.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment, ActivitiesFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+        val promo2: View = view.findViewById(R.id.promo2)
+        promo1.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment, ActivitiesFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+        return view
     }
 }
